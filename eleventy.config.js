@@ -8,7 +8,6 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addTemplateFormats("scss");
   eleventyConfig.addPassthroughCopy({ "_src/assets/img": "assets/img" });
-	
   eleventyConfig.addExtension("scss", {
     outputFileExtension: "css",
 
