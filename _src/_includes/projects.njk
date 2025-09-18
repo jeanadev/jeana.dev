@@ -1,0 +1,64 @@
+{% extends "base.njk" %}
+
+  {% block title %}
+    {{ sectionHeader }}
+  {% endblock %}
+
+  {% block content %}
+    {% import "icons.njk" as icons %}
+
+      <section class="projects {% if modifier %}projects-{{ modifier }}{% endif %}">
+        <div hidden>
+          <span id="new-window-0">Opens in a new window</span>
+          <span id="new-window-1">Opens an external site</span>
+          <span id="new-window-2">Opens an external site in a new window</span>
+        </div>
+
+        <header>
+          <h1 class="projects--section-header">{{ sectionHeader }}</h1>
+        </header>
+
+        {% for project in projects %}
+          <article class="projects--project">
+
+            <h2 class="projects--title">{{ project.title }}</h2>
+            <h3 class="projects--subtitle" id="{{ project.anchor }}">{{ project.company }}</h3>
+
+              <div class="projects--summary">
+                <h4 class="projects--summary-subtitle">Skills</h4>
+                <ul class="projects--skills">
+                  {% for skill in project.skills %}
+                    <li class="projects--skills-item">{{ skill }}{% if not loop.last %},{% endif %}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+
+              <div class="projects--description">
+                {{ project.description|safe }}
+
+                <ul class="projects--description-links">
+                  {% for link in project.description_links %}
+                    <li class="projects--description-links-item">
+                      <a class="projects--description-links-item-link" href="{{ link.link }}" target="_blank" rel="noopener">
+                        {{ link.link_text }}
+                        {{ icons.get("new-window") }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+
+              <div class="projects--thumbnail">
+                <img class="projects--img{% if project.modifier_class %} {{ project.modifier_class }}{% endif %}" 
+                  src="{{ project.img }}" 
+                  alt="{{ project.img_alt }}" 
+                  {% if project.img_width %}width="{{ project.img_width }}" {% endif %}
+                  {% if project.img_height %}height="{{ project.img_height }}" {% endif %}
+                />
+              </div>
+
+          </article>
+        {% endfor %}
+      </section>
+  {% endblock %}
+

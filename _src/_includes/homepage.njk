@@ -1,0 +1,39 @@
+
+{% extends "base.njk" %}
+
+{% block title %}
+  {{ sectionHeader }}
+{% endblock %}
+
+{% block content %}
+  {% import "icons.njk" as icons %}
+
+    <section class="featured">
+      <div hidden>
+        <span id="new-window-0">Opens in a new window</span>
+        <span id="new-window-1">Opens an external site</span>
+        <span id="new-window-2">Opens an external site in a new window</span>
+      </div>
+
+      <header>
+        <h1 class="featured--section-header">{{ sectionHeader }}</h1>
+      </header>
+
+      <div class="featured--grid">
+        {% for feature in featured %}
+          <article class="featured--project">
+            <a class="featured--link" href="{{ feature.link }}">
+              <h2 class="featured--title">{{ feature.title }}</h2>
+              <img class="featured--image" src="{{ feature.img }}" alt="{{ feature.img_alt }}" 
+                  {% if feature.img_width %}width="{{ feature.img_width }}" {% endif %}
+                  {% if feature.img_height %}height="{{ feature.img_height }}" {% endif %}
+                />
+            </a>
+
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+
+{% endblock %}

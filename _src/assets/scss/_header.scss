@@ -1,0 +1,181 @@
+@use "breakpoints";
+@use "typography";
+@use "variables";
+
+
+ /* global */
+
+ body {
+  background-color: variables.$color-light-green;
+  border-top: 1rem solid variables.$color-darkest-green;
+  font-family: typography.$font-stack-sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+.header {
+  background-color: variables.$color-light-green;
+  display: grid;
+  grid-template-areas:
+      'logo'
+      'name'
+      'nav';
+  grid-template-columns: 1fr;
+
+  @include breakpoints.breakpoint(breakpoints.$bp-md) {
+     width: 950px;
+     margin: 0 auto 12px;
+     grid-template-areas: 'logo name nav';
+     grid-template-columns: min-content max-content auto;
+     gap: 16px;
+  }
+}
+
+.header-logo {
+  grid-area: logo;
+  margin: 0 auto;
+  display: block;
+
+  img {
+    width: 90px;
+    height: 126px;
+    margin: 0;
+
+    @include breakpoints.breakpoint(breakpoints.$bp-md) {
+      width: 100px;
+      height: 140px;
+    }
+  }
+
+  @include breakpoints.breakpoint(breakpoints.$bp-md) {
+  }
+}
+
+.header-name {
+  grid-area: name;
+  font-size: 1.8rem;
+  letter-spacing: .05em;
+  font-family: typography.$font-stack-sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include breakpoints.breakpoint(breakpoints.$bp-md) {
+    position: relative;
+    font-size: 3rem;
+    top: 24px;
+  }
+}
+
+.header-nav {
+  grid-area: nav;
+  text-align: center;
+  width: 100%;
+  margin: 1em auto;
+  background-color: variables.$color-green;
+  height: auto;
+
+  @include breakpoints.breakpoint(breakpoints.$bp-sm) {
+    height: 35px;
+    margin-bottom: 1.9em;
+  }
+
+  @include breakpoints.breakpoint(breakpoints.$bp-md) {
+    background-color: inherit;
+    width: 100%;
+    position: relative;
+    top: 20px;
+    max-width: 400px;
+  }
+}
+
+.header-menu {
+  padding: 0;
+  align-content: center;
+  list-style: none;
+  margin: 0 auto;
+  max-width: 400px;
+
+  @include breakpoints.breakpoint(breakpoints.$bp-sm) {
+    grid-gap: 8px;
+    grid-template-columns: repeat(5, 1fr);
+    display: grid;
+  }
+}
+
+.header-menu-item {
+  display: inline-block;
+}
+
+.header-menu-item-link  {
+  color: variables.$color-medium-green;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  margin: 0;
+  display: block;
+  padding: 8px 6px;
+  font-size: .75rem;
+  transition: all .1s ease;
+  text-transform: uppercase;
+
+  @include breakpoints.breakpoint(breakpoints.$bp-sm){
+    font-size: 1rem;
+    padding: 8px 11px;
+  }
+
+  &:hover,
+  &:active {
+    background: rgba(110, 117, 68, .3);
+    transition: background .2s ease-in;
+
+    @include breakpoints.breakpoint (breakpoints.$bp-md) {
+    border-radius: 7px;
+    }
+  }
+}
+
+
+.header-menu-item-selected {
+
+  a {
+    background-color: variables.$color-darkest-green;
+    color: variables.$color-green;
+  }
+
+  @include breakpoints.breakpoint(breakpoints.$bp-sm) {
+  background: rgba(0,0,0,0) url(/assets/img/navArrowsm.png) no-repeat 50% 25px;
+  background-size: 60px 30px;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-name: arrow;
+  transition: all .2s ease-in-out;
+  padding-bottom: 30px;
+  }
+
+
+  @include breakpoints.breakpoint(breakpoints.$bp-md) {
+    position: relative;
+    background-color: transparent;
+    background-image: url(/assets/img/navArrow.png);
+    background-repeat: no-repeat;
+    background-position: 50% 34px;
+    background-size: 10px 30px;
+
+    a {
+    background-color: variables.$color-darkest-green;
+    color: variables.$color-green;
+
+    @include breakpoints.breakpoint(breakpoints.$bp-md) {
+    border-radius: 7px;
+    }
+
+    &:hover,
+    &:active {
+      background-color: variables.$color-darkest-green;
+    color: variables.$color-green;
+    }
+
+    }
+  }
+}

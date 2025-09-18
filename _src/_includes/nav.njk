@@ -1,0 +1,13 @@
+{% set navPages = collections.all | eleventyNavigation %}
+{% if navPages.length > 0 %}
+  <nav class="header-nav">
+
+    <ul class="header-menu">
+    {%- for entry in navPages %}
+      <li class="header-menu-item {% if entry.url == page.url %}header-menu-item-selected{% endif %}">
+        <a class="header-menu-item-link" href="{{ entry.url }}">{{ entry.title }}</a>
+      </li>
+    {%- endfor %}
+    </ul>
+</nav>
+{% endif %}

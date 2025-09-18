@@ -1,0 +1,58 @@
+@use "breakpoints";
+@use "variables";
+
+/* footer */
+
+footer {
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 48px;
+  margin-top: 16px;
+  text-align: center;
+  text-transform: uppercase;
+
+  
+  @include breakpoints.breakpoint(breakpoints.$bp-md) {
+    margin-top: 36px;
+  }
+}
+
+.footer-nav {
+  max-width: 550px;
+  margin: 16px auto;
+  overflow: hidden;
+  position: relative;
+}
+ 
+.footer-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin-left: -1px;
+  padding: 0;
+
+}
+
+.footer-menu-item {
+  border-left: 1px solid variables.$color-darkest-green;
+  flex-grow: 1;
+  flex-basis: auto;
+  margin: 8px 0;
+  padding: 0 20px;
+  text-align: center;
+
+  a {
+    color: variables.$color-medium-green;
+    text-decoration: none;
+    text-underline-offset: 3px;
+    transition: all .1s ease;
+
+    &:hover, 
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
