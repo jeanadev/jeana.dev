@@ -83,7 +83,7 @@ projects:
     modifer_class: "projects--img-shadow"
     skills: ["Strategic Planning", "HTML", "CSS"]
     description: "<p class='projects--description-text'>Designed HTML emails for various campus departments. Worked as a team with the IT director and Marketing director to create a student-recruitment funnel system, tracking electronic correspondence with potential students from initial contact through application and acceptance.</p>"
-  - company": "Follett Educational Distribution Group"
+  - company: "Follett Educational Distribution Group"
     title: "Intranet Site"
     anchor: "FEDGTownHall"
     img: "/assets/img/web-fedg.webp"
