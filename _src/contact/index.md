@@ -1,6 +1,6 @@
 ---
 title: Web Development - Jeana Clark Portfolio
-description: Portfolio of Designer, Developer, Accessibility Advocate, Jeana Clark"
+description: "Portfolio of Designer, Developer, Accessibility Advocate, Jeana Clark"
 eleventyNavigation:
   key: Contact
   order: 5
