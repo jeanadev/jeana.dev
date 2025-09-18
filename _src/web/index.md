@@ -59,7 +59,7 @@ projects:
     img_width: "644"
     img_height: "483"
     skills: ["Responsive Web Design", "HTML", "CSS", "Classic ASP"]
-    description: "<p class='projects--description-text'>A responsive experiment thadescriptionprint viewbook for the undergraduate program and made it accessible online.</p>"
+    description: "<p class='projects--description-text'>A responsive experiment that took a print viewbook for the undergraduate program and made it accessible online.</p>"
   - company: "Open Source"
     title: "Beyondgrep.com"
     anchor: "BeyondGrep"
