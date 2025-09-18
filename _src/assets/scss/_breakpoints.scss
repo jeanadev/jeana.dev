@@ -1,0 +1,17 @@
+@use "sass:meta";
+$bp-xsm: 320px;
+$bp-sm: 500px;
+$bp-md: 950px;
+
+@mixin breakpoint($viewport) {
+  @if meta.type-of($viewport) == number {
+    @media screen and ( min-width: $viewport ) {
+      @content;
+    }
+  }
+  @else {
+    @media screen and ( $viewport ) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+/* colors */
+$color-light-green: #dce0c2;
+$color-green: #bec39e;
+$color-medium-green: #4B5232;
+$color-darkest-green: #3f461d;
+$color-grey: #757575;
+$color-light-grey: #dcdcdc;
+
+.mediumgreen {
+  font-weight: 700;
+}
+
+.mediumgreen,
+.mediumgreen2 {
+  color: $color-medium-green;
+}

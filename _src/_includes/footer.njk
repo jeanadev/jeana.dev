@@ -1,0 +1,19 @@
+<!-- templates/footer.njk -->
+
+<footer>
+{% set navPages = collections.all | eleventyNavigation %}
+{% if navPages.length > 0 %}
+  <nav class="footer-nav">
+
+      <ul class="footer-menu">
+    {%- for entry in navPages %}
+      <li class="footer-menu-item">
+        <a href="{{ entry.url }}">{{ entry.title }}</a>
+      </li>
+    {%- endfor %}
+    </ul>
+
+  </nav>
+  {% endif %}
+</footer>
+
