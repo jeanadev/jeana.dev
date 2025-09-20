@@ -37,7 +37,15 @@ export default function (eleventyConfig) {
     },
   });
 
-  // Passthrough for compiled CSS
+  eleventyConfig.addCollection("htmlPages", (collectionApi) =>
+  collectionApi.getAll().filter(
+    (item) =>
+      item.url &&
+      !item.url.match(/\.(assets|scss|css|js|json|xml|png|jpe?g|svg)$/)
+    )
+  );
+
+  eleventyConfig.addGlobalData("BASE_URL", process.env.BASE_URL || "https://www.jeana.dev");
 
   return {
     templateFormats: ["md", "njk", "html", "scss"],

@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -r _site",
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "build": "cross-env BASE_URL=https://www.jeana.dev eleventy",
+    "serve": "cross-env BASE_URL=http://localhost:8080 eleventy --serve",
+    "watch": "cross-env BASE_URL=http://localhost:8080 eleventy --watch"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,8 @@
     "@11ty/eleventy-navigation": "^1.0.4",
     "sass": "^1.92.1"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "cross-env": "^10.0.0"
+  }
 }
