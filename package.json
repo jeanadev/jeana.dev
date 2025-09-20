@@ -2,20 +2,25 @@
   "name": "jeana.dev",
   "version": "1.0.0",
   "description": "My personal website",
-  "main": "index.js",
+  "author":{
+    "name": "Jeana Clark",
+    "email": "hello@jeana.dev",
+    "url": "https://jeana.dev"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -r _site",
     "build": "cross-env BASE_URL=https://www.jeana.dev eleventy",
     "serve": "cross-env BASE_URL=http://localhost:8080 eleventy --serve",
-    "watch": "cross-env BASE_URL=http://localhost:8080 eleventy --watch"
+    "watch": "cross-env BASE_URL=http://localhost:8080 eleventy --watch",
+    "deploy:dry": "./deploy.sh --dry",
+    "deploy:prod": "./deploy.sh"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jeanadev/jeana.dev.git"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jeanadev/jeana.dev/issues"
