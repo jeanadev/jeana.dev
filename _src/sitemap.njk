@@ -10,6 +10,7 @@ eleventyExcludeFromCollections: true
   <url>
     <loc>{{ hostname }}{{ page.url }}</loc>
   </url>
+  {{ "\n" }}
   {%- endif -%}
 {%- endfor %}
 </urlset>
