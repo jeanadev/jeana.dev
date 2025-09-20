@@ -3,7 +3,7 @@
 <footer>
 {% set navPages = collections.all | eleventyNavigation %}
 {% if navPages.length > 0 %}
-  <nav class="footer-nav">
+  <nav class="footer-nav" aria-label="Footer navigation">
 
       <ul class="footer-menu">
     {%- for entry in navPages %}

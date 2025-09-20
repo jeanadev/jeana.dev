@@ -44,7 +44,10 @@ test.describe('WCAG 2.2 Accessibility Tests', () => {
       await page.goto(`http://localhost:8080${url}`);
       
       const accessibilityScanResults = await new AxeBuilder({ page })
-        .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
+        .withTags([
+          'wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', // WCAG compliance
+          'best-practice' // Axe best practice rules
+        ])
         .analyze();
 
       expect(accessibilityScanResults.violations, 

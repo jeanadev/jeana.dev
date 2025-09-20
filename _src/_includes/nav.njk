@@ -1,6 +1,6 @@
 {% set navPages = collections.all | eleventyNavigation %}
 {% if navPages.length > 0 %}
-  <nav class="header-nav">
+  <nav class="header-nav" aria-label="Main navigation">
 
     <ul class="header-menu">
     {%- for entry in navPages %}
