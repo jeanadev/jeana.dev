@@ -33,17 +33,14 @@ async function getUrlsFromSitemap() {
   }
 }
 
+// Get URLs synchronously for test generation
+const urls = await getUrlsFromSitemap();
+console.log('Testing URLs from sitemap:', urls);
+
 test.describe('WCAG 2.2 Accessibility Tests', () => {
-  let urls;
-
-  test.beforeAll(async () => {
-    urls = await getUrlsFromSitemap();
-    console.log('Testing URLs from sitemap:', urls);
-  });
-
-  test('should not have accessibility violations on any page', async ({ page }) => {
-    for (const url of urls) {
-      console.log(`Testing ${url}`);
+  // Generate a test for each URL - runs in parallel
+  for (const url of urls) {
+    test(`should not have accessibility violations on ${url}`, async ({ page }) => {
       await page.goto(`http://localhost:8080${url}`);
       
       const accessibilityScanResults = await new AxeBuilder({ page })
@@ -52,6 +49,6 @@ test.describe('WCAG 2.2 Accessibility Tests', () => {
 
       expect(accessibilityScanResults.violations, 
         `Accessibility violations found on ${url}`).toEqual([]);
-    }
-  });
+    });
+  }
 });

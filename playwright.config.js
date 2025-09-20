@@ -4,12 +4,14 @@ export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+  retries: process.env.CI ? 1 : 0,
+  workers: process.env.CI ? 6 : undefined, // More workers in CI
+  reporter: 'line', // Faster reporter for CI
+  timeout: 30000, // 30s timeout instead of default 30s
   use: {
     baseURL: 'http://localhost:8080',
-    trace: 'on-first-retry',
+    trace: 'retain-on-failure', // Only trace on failure
+    actionTimeout: 10000, // Faster action timeout
   },
 
   projects: [
@@ -23,5 +25,6 @@ export default defineConfig({
     command: 'npm run build && npm run serve',
     url: 'http://localhost:8080',
     reuseExistingServer: !process.env.CI,
+    timeout: 60000, // 1 minute to start server
   },
 });
