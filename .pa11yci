@@ -1,0 +1,20 @@
+{
+  "defaults": {
+    "timeout": 5000,
+    "wait": 500,
+    "standard": "WCAG2AA",
+    "level": "error",
+    "runners": ["htmlcs"],
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
+    }
+  },
+  "urls": [
+    "http://localhost:8080/",
+    "http://localhost:8080/contact/",
+    "http://localhost:8080/logos/",
+    "http://localhost:8080/print/",
+    "http://localhost:8080/speaking/",
+    "http://localhost:8080/web/"
+  ]
+}
