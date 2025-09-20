@@ -29,7 +29,7 @@ echo "🔧 Using TARGET_PATH: $TARGET_PATH"
 # --- Branch safety ---
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 if [[ "$CURRENT_BRANCH" != "main" ]]; then
-echo "❌ Refusing to deploy: you are on branch '$CURRENT_BRANCH' (must be on 'main')."
+echo "❌ Refusing to deploy: you are on branch '"$CURRENT_BRANCH"' (must be on 'main')."
 exit 1
 fi
 
@@ -48,7 +48,7 @@ npm run build
 # --- Deploy ---
 echo "📂 Deploying to ${TARGET_USER}@${TARGET_HOST}:${TARGET_PATH}"
 
-rsync $RSYNC_FLAGS _site/ ${TARGET_USER}@${TARGET_HOST}:${TARGET_PATH}
+rsync $RSYNC_FLAGS _site/ "${TARGET_USER}@${TARGET_HOST}:${TARGET_PATH}"
 
 echo "✅ Deploy complete!"
 echo "🌐 Site URL: https://${TARGET_HOST}/"
