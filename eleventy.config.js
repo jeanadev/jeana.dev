@@ -37,7 +37,7 @@ export default function (eleventyConfig) {
     },
   });
 
-  // Passthrough for compiled CSS
+  eleventyConfig.addGlobalData("BASE_URL", process.env.BASE_URL || "https://www.jeana.dev");
 
   return {
     templateFormats: ["md", "njk", "html", "scss"],
