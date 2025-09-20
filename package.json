@@ -8,9 +8,8 @@
     "url": "https://jeana.dev"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test:a11y": "pa11y-ci",
-    "test:a11y:local": "npm run serve & sleep 5 && pa11y-ci && kill %1",
+    "test": "playwright test tests/accessibility.spec.js",
+    "test:a11y": "playwright test tests/accessibility.spec.js",
     "clean": "rm -r _site",
     "build": "cross-env BASE_URL=https://www.jeana.dev eleventy",
     "serve": "cross-env BASE_URL=http://localhost:8080 eleventy --serve",
@@ -35,7 +34,11 @@
   },
   "type": "module",
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.55.0",
     "cross-env": "^10.0.0",
-    "pa11y-ci": "^4.0.1"
+    "pa11y-ci": "^4.0.1",
+    "playwright": "^1.55.0",
+    "xml2js": "^0.6.2"
   }
 }
