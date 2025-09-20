@@ -2,13 +2,15 @@
   "name": "jeana.dev",
   "version": "1.0.0",
   "description": "My personal website",
-  "author":{
+  "author": {
     "name": "Jeana Clark",
     "email": "hello@jeana.dev",
     "url": "https://jeana.dev"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test:a11y": "pa11y-ci",
+    "test:a11y:local": "npm run serve & sleep 5 && pa11y-ci && kill %1",
     "clean": "rm -r _site",
     "build": "cross-env BASE_URL=https://www.jeana.dev eleventy",
     "serve": "cross-env BASE_URL=http://localhost:8080 eleventy --serve",
@@ -33,6 +35,7 @@
   },
   "type": "module",
   "devDependencies": {
-    "cross-env": "^10.0.0"
+    "cross-env": "^10.0.0",
+    "pa11y-ci": "^4.0.1"
   }
 }
