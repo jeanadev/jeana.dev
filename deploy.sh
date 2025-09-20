@@ -51,5 +51,5 @@ echo "📂 Deploying to ${TARGET_USER}@${TARGET_HOST}:${TARGET_PATH}"
 rsync $RSYNC_FLAGS _site/ "${TARGET_USER}@${TARGET_HOST}:${TARGET_PATH}"
 
 echo "✅ Deploy complete!"
-echo "🌐 Site URL: https://${TARGET_HOST}/"
+echo "🌐 Site URL: https://www.jeana.dev"
 echo "🔗 View the live site to confirm everything looks correct."
