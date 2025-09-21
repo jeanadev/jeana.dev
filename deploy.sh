@@ -4,6 +4,7 @@ set -euo pipefail
 # Usage:
 #   ./deploy.sh        -> normal deploy (must be on main branch)
 #   ./deploy.sh --dry  -> dry-run deploy (preview only)
+#   ./deploy.sh --skip-a11y  -> skip accessibility tests (emergency only)
 
 # --- Load config ---
 if [ -f .env ]; then
@@ -35,15 +36,34 @@ fi
 
 # --- Dry run option ---
 RSYNC_FLAGS="-avz --delete -e ssh"
+SKIP_A11Y=false
+
 if [[ "${1:-}" == "--dry" ]]; then
   echo "🔎 Dry run mode enabled"
   RSYNC_FLAGS="$RSYNC_FLAGS --dry-run"
+elif [[ "${1:-}" == "--skip-a11y" ]]; then
+  echo "⚠️  Skipping accessibility tests (emergency mode)"
+  SKIP_A11Y=true
 fi
 
 # --- Build ---
 echo "🚀 Building site for production (branch: $CURRENT_BRANCH)..."
 npm run clean
 npm run build
+
+# --- Accessibility Testing ---
+if [[ "$SKIP_A11Y" == "false" ]]; then
+  echo "🧪 Running accessibility tests..."
+  npm run test:a11y
+  if [ $? -ne 0 ]; then
+    echo "❌ Accessibility tests failed. Deployment cancelled."
+    echo "💡 Fix accessibility issues and try again, or use --skip-a11y for emergencies."
+    exit 1
+  fi
+  echo "✅ Accessibility tests passed!"
+else
+  echo "⚠️  Accessibility tests skipped"
+fi
 
 # --- Deploy ---
 echo "📂 Deploying to ${TARGET_USER}@${TARGET_HOST}:${TARGET_PATH}"

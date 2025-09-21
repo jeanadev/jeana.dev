@@ -15,7 +15,8 @@
     "serve": "cross-env BASE_URL=http://localhost:8080 eleventy --serve",
     "watch": "cross-env BASE_URL=http://localhost:8080 eleventy --watch",
     "deploy:dry": "./deploy.sh --dry",
-    "deploy:prod": "./deploy.sh"
+    "deploy:prod": "./deploy.sh",
+    "deploy:emergency": "./deploy.sh --skip-a11y"
   },
   "repository": {
     "type": "git",
@@ -37,7 +38,6 @@
     "@axe-core/playwright": "^4.10.2",
     "@playwright/test": "^1.55.0",
     "cross-env": "^10.0.0",
-    "pa11y-ci": "^4.0.1",
     "playwright": "^1.55.0",
     "xml2js": "^0.6.2"
   }
