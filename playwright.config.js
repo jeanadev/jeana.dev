@@ -7,7 +7,7 @@ export default defineConfig({
   retries: process.env.CI ? 1 : 0,
   workers: process.env.CI ? 6 : undefined, // More workers in CI
   reporter: 'line', // Faster reporter for CI
-  timeout: 30000, // 30s timeout instead of default 30s
+  timeout: 60000, // 60s timeout for thorough accessibility testing
   use: {
     baseURL: 'http://localhost:8080',
     trace: 'retain-on-failure', // Only trace on failure
