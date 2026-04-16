@@ -8,9 +8,9 @@ categories: ["ai","design","engineering"]
 tags: thoughts
 ---
 
-When organizations adopt AI through engineering workflows, design work gets pulled into the pipeline, turned into a prompt generator for code, or just another way to produce artifacts faster. Designers adapt to those workflows because they’re often the only ones available—but that adaptation shifts the focus away from the kind of decision-making design is supposed to do.
+When organizations adopt AI through engineering workflows, design work gets pulled into the pipeline, turned into a prompt generator for code, or just another way to produce artifacts faster. Designers adapt to those workflows because they’re often the only ones available, but that adaptation shifts the focus away from the kind of decision-making design is supposed to do.
 
-The overlap between design and engineering is important, and it can improve decision-making on both sides. When designers understand how engineers build, code, and test, they make better design decisions. When engineers understand design thinking, they build more thoughtfully. But that overlap isn’t the same as doing the same work—or using the same workflows.
+The overlap between design and engineering is important, and it can improve decision-making on both sides. When designers understand how engineers build, code, and test, they make better design decisions. When engineers understand design thinking, they build more thoughtfully. But that overlap isn’t the same as doing the same work, or using the same workflows.
 
 The earliest gains from AI have shown up in engineering through faster code generation, automated pipelines, and improved system efficiency. That’s not surprising. Engineering work already optimizes for **speed** and **output**, and AI accelerates both.
 
@@ -48,7 +48,7 @@ This doesn't happen because organizations explicitly decide that design should w
 
 Design work makes better decisions before anything is built.
 
-It identifies what not to build, surfaces risks before they become expensive, and creates a shared understanding so teams can build confidently in the right direction. The same holds true whether designers are choosing navigation patterns that work for unfamiliar users, structuring content hierarchy for screen readers, or determining which research questions to ask before designing a new feature. Slowing down these early decisions often speeds up delivery overall—by preventing rework and late-stage failures.
+It identifies what not to build, surfaces risks before they become expensive, and creates a shared understanding so teams can build confidently in the right direction. The same holds true whether designers are choosing navigation patterns that work for unfamiliar users, structuring content hierarchy for screen readers, or determining which research questions to ask before designing a new feature. Slowing down these early decisions often speeds up delivery overall, by preventing rework and late-stage failures.
 
 You can see this most clearly in accessibility work.
 
@@ -64,7 +64,7 @@ Speeding up the wrong part doesn't help; it just gets you to the wrong place fas
 
 This isn’t an argument against using AI in design. It’s an argument for using AI in ways that match how design actually works.
 
-Using AI to generate code faster doesn't make the result more accessible. Using AI to pressure-test an interaction does. That questioning—What breaks for keyboard-only users? Where does focus order fall apart? What will a screen reader announce?—extends the thinking already happening.
+Using AI to generate code faster doesn't make the result more accessible. Using AI to pressure-test an interaction does. That questioning, *What breaks for keyboard-only users? Where does focus order fall apart? What will a screen reader announce?*, extends the thinking already happening.
 
 That’s AI acting as a thinking partner, not a production tool.
 
@@ -75,7 +75,7 @@ When used well, AI can support the kind of thinking that design requires by:
 * exploring edge cases  
 * synthesizing research
 
-In accessibility work, a decision made early in the process—about interaction patterns, component structure, and content hierarchy—can prevent failures that no downstream tooling will catch. Used that way, AI supports judgment instead of replacing it.
+In accessibility work, a decision made early in the process about interaction patterns, component structure, and content hierarchy, can prevent failures that no downstream tooling will catch. Used that way, AI supports judgment instead of replacing it.
 
 The more important question for any AI initiative isn’t just *“How do we go faster?”* It’s *“Which parts of the work improve with AI—and which parts need to remain slow?”*
 
@@ -93,9 +93,9 @@ Product development is a shared system of decisions, not just execution. AI adop
 
 In practice, that means:
 
-* **Evaluate AI tools across engineering, design, and product workflows:** Does this tool help engineers code faster—and support designers in exploring alternatives, pressure-testing decisions, and surfacing edge cases?  
-* **Define success in a way that includes decision quality:** Look at rework, whether accessibility issues are caught early or late, and whether research actually changes direction  
-* **Be explicit about which kinds of thinking need protection:** Call out which parts of the process should stay slow and exploratory—and why that slowness matters  
-* **Involve both disciplines when selecting tools and defining workflows:** Don’t bring designers in after decisions are made—include them in defining how tools are evaluated
+* **Evaluate AI tools across engineering, design, and product workflows:** Does this tool help engineers code faster •and* support designers in exploring alternatives, pressure-testing decisions, and surfacing edge cases?
+* **Define success in a way that includes decision quality:** Look at rework, whether accessibility issues are caught early or late, and whether research actually changes direction
+* **Be explicit about which kinds of thinking need protection:** Call out which parts of the process should stay slow and exploratory, and why that slowness matters
+* **Involve both disciplines when selecting tools and defining workflows:** Don’t bring designers in after decisions are made, include them in defining how tools are evaluated and selected
 
 AI shouldn’t just make teams faster. It should help them make better decisions. That only happens when design, engineering, and product shape how AI is used together, not when one is left adapting to how the others work.
