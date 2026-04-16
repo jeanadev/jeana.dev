@@ -1,9 +1,9 @@
 ---
 title: Web Development - Jeana Clark Portfolio
 description: Portfolio of Designer, Developer, Accessibility Advocate, Jeana Clark
-eleventyNavigation:
-  key: Logos
-  order: 4
+# eleventyNavigation:
+#  key: Logos
+#  order: 4
 layout: projects.njk
 modifier: logo
 sectionHeader: Logo and Brand Development

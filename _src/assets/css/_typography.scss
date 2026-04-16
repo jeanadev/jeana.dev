@@ -1,3 +1,8 @@
 
-$font-stack-sans-serif: raleway, arial, sans-serif;
+$font-stack-sans-serif: "Public Sans", arial, sans-serif;
 $font-stack-serif: Merriweather, Georgia, "Times New Roman", serif;
+
+p strong,
+li strong {
+  font-weight:700;
+}

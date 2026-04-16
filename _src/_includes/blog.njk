@@ -1,0 +1,29 @@
+{% extends "base.njk" %}
+
+  {% block title %}
+    {{ sectionHeader }}
+  {% endblock %}
+
+  {% block content %}
+    {% import "icons.njk" as icons %}
+
+      <section class="blog {% if modifier %}blog-{{ modifier }}{% endif %}">
+        <div hidden>
+          <span id="new-window-0">Opens in a new window</span>
+          <span id="new-window-1">Opens an external site</span>
+          <span id="new-window-2">Opens an external site in a new window</span>
+        </div>
+
+        <header>
+          <h1 class="blog--title">{{ title }}</h1>
+        </header>
+
+        <time class="posted-on" datetime="{{ date.toISOString() }}">
+          {{ date | readableDate }}
+        </time>
+        
+
+        {{ content|safe }}
+
+      </section>
+  {% endblock %}

@@ -5,7 +5,7 @@
     <ul class="header-menu">
     {%- for entry in navPages %}
       <li class="header-menu-item {% if entry.url == page.url %}header-menu-item-selected{% endif %}">
-        <a class="header-menu-item-link" href="{{ entry.url }}">{{ entry.title }}</a>
+        <a class="header-menu-item-link" href="{{ entry.url }}" {% if entry.url == page.url %}aria-current="page"{% endif %}>{{ entry.title }}</a>
       </li>
     {%- endfor %}
     </ul>

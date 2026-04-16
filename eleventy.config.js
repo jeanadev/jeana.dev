@@ -3,8 +3,17 @@ import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import path from "node:path";
 import * as sass from "sass";
 
+const postDateFormatter = new Intl.DateTimeFormat("en-US", {
+  weekday: "long",
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "UTC",
+});
+
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addFilter("readableDate", (value) => postDateFormatter.format(value));
 
   eleventyConfig.addTemplateFormats("scss");
   eleventyConfig.addPassthroughCopy({ "_src/assets/img": "assets/img" });

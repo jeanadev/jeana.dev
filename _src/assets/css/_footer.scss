@@ -4,13 +4,15 @@
 /* footer */
 
 footer {
+  background-color: variables.$color-light-green;
   font-size: .75rem;
   font-weight: 500;
   letter-spacing: 2px;
-  margin-bottom: 48px;
+  padding-bottom: 48px;
   margin-top: 16px;
   text-align: center;
   text-transform: uppercase;
+  padding-top: 1rem;
 
   
   @include breakpoints.breakpoint(breakpoints.$bp-md) {
@@ -26,33 +28,34 @@ footer {
 }
  
 .footer-menu {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  place-items: center;
   list-style: none;
-  margin-left: -1px;
   padding: 0;
+  margin-top: 1rem;
 
 }
 
+.footer-menu-item + .footer-menu-item {
+    border-left: 1px solid variables.$color-darkest-green;
+}
+
 .footer-menu-item {
-  border-left: 1px solid variables.$color-darkest-green;
-  flex-grow: 1;
-  flex-basis: auto;
   margin: 8px 0;
-  padding: 0 20px;
   text-align: center;
+  width: 100%;
 
   a {
     color: variables.$color-medium-green;
-    text-decoration: none;
     text-underline-offset: 3px;
     transition: all .1s ease;
 
     &:hover, 
     &:active {
-      text-decoration: underline;
+      text-decoration-thickness: 3px;
     }
   }
+
 }
