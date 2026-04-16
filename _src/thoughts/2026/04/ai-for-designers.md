@@ -1,6 +1,6 @@
 ---
 title: Design and engineering solve different problems; AI initiatives are forgetting that 
-description: Portfolio of Designer, Developer, Accessibility Advocate, Jeana Clark
+description: When using AI, designers are adapting to engineering workflows because they're often the only ones available.
 sectionHeader: Thoughts
 layout: blog.njk
 date: 2026-04-15
