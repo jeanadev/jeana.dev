@@ -1,9 +1,6 @@
 ---
 title: Web Development - Jeana Clark Portfolio
 description: Portfolio of Designer, Developer, Accessibility Advocate, Jeana Clark
-eleventyNavigation:
-  key: Speaking
-  order: 1
 layout: projects.njk
 modifier: speaking
 sectionHeader: Speaking
