@@ -29,7 +29,7 @@ I’m a <a href="https://www.credly.com/badges/20b21b81-4938-409f-a77f-a2dfbfb82
 
 ## How I got here
 
-My path into this work wasn't linear. I started in design and front-end development, spent time studying communication and people in graduate school, and eventually found my way into civic tech. That background still shapes how I work—understanding people, clarifying intent, and communicating clearly across disciplines. 
+My path into this work wasn't linear. I started in design and front-end development, spent time studying communication and people in graduate school, and eventually found my way into civic tech. That background still shapes how I work—understanding people, clarifying intent, and communicating clearly across disciplines.
 
 I also bring a personal perspective to accessibility. While I can access the web independently, I navigate physical environments differently and often have to ask for help. That experience shapes how I think about independence and access. I want digital services to be something people can use on their own, without needing to rely on others.
 
