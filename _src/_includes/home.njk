@@ -1,0 +1,18 @@
+{% extends "base.njk" %}
+
+  {% block title %}
+    {{ sectionHeader }}
+  {% endblock %}
+
+  {% block content %}
+
+      <section class="home freeform {% if modifier %}freeform-{{ modifier }}{% endif %}">
+
+        <header>
+          <h1 class="home-section-header">{{ sectionHeader }}</h1>
+        </header>
+
+        {{ content|safe }}
+
+      </section>
+  {% endblock %}

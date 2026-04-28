@@ -9,6 +9,8 @@ modifier: about
 sectionHeader: About Me
 ---
 
+<div class="slim">
+
 
 ## Professional work
 
@@ -36,3 +38,5 @@ I also bring a personal perspective to accessibility. While I can access the web
 ## Outside of work
 
 When I'm not on the computer, I spend time with fiber arts (knitting, crochet, weaving), playing violin in a community orchestra, and taking road trips with my husband.
+
+</div>
