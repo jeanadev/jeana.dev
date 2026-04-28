@@ -9,8 +9,6 @@ sectionHeader: Hi, I'm Jeana.
 
 ---
 
-<div class="slim">
-
 I'm an Accessibility specialist and design lead. I help teams build clear, usable digital services by making accessibility and design systems easier to understand and implement.
 
 Most accessibility issues don’t come from lack of effort—they come from unclear expectations. I work to fix that.
@@ -40,4 +38,3 @@ Most accessibility issues don’t come from lack of effort—they come from uncl
 
 ## Contact
 If you want to talk about accessibility, design systems, or improving how teams work, please send me an email at <a href="mailto:jeana@jeana.dev">jeana@jeana.dev</a>.
-</div>
