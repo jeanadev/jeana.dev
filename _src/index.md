@@ -2,44 +2,39 @@
 title: Web Development - Jeana Clark Portfolio
 description: Portfolio of Designer, Developer, Accessibility Advocate, Jeana Clark
 
-layout: homepage.njk
+layout: home.njk
 modifier: home
-sectionHeader: Recent Work
-featured:
-  - title: "Speaking :: Web Accessibility"
-    img: "/assets/img/highlighted/TN-That2021.webp"
-    img_alt: "THAT Conference 2021 - Speaker Title Slide"
-    img_width: "295"
-    img_height: "155"
-    link: "/speaking/#THAT2021"
-  - title: "Web :: HTML, SCSS, Drupal, WCAG Accessibility Standards"
-    img: "/assets/img/highlighted/TN-spinehealth.webp"
-    img_alt: "Spine-health.com Screenshot of All About Neck Pain Article"
-    img_width: "295"
-    img_height: "155"
-    link: "/web/#Veritas"
-  - title: "Web :: HTML, CSS, CLASSIC ASP"
-    img: "/assets/img/highlighted/TN-GattonUnited.webp"
-    img_alt: "Gatton United Capital Campaign"
-    img_width: "295"
-    img_height: "155"
-    link: "/web/#GattonUnited"
-  - title: "Web :: Drupal Development"
-    img: "/assets/img/highlighted/TN-GattonSignage.webp"
-    img_alt: "Drupal Signage"
-    img_width: "295"
-    img_height: "155"
-    link: "/web/#DigitalSignage"
-  - title: "Web :: Design & Icon Illustration"
-    img: "/assets/img/highlighted/TN-InboxOrange.webp"
-    img_alt: "Inbox Orange Screenshot"
-    img_width: "295"
-    img_height: "155"
-    link: "/web/#InboxOrange"
-  - title: "Web :: Open Source, HTML & CSS"
-    img: "/assets/img/highlighted/TN-ack.webp"
-    img_alt: "ack - BeyondGrep.com Screenshot"
-    img_width: "295"
-    img_height: "155"
-    link: "/web/#BeyondGrep"
+
+sectionHeader: Hi, I'm Jeana.
+
 ---
+
+I'm an Accessibility specialist and design lead. I help teams build clear, usable digital services by making accessibility and design systems easier to understand and implement.
+
+Most accessibility issues don’t come from lack of effort—they come from unclear expectations. I work to fix that.
+
+## How I work
+* Improve both the user experience and the systems teams use to build it
+* Make accessibility requirements clear and testable
+* Reduce ambiguity across design, engineering, and product teams
+* Build systems and patterns that scale across teams
+* Surface risks early by asking the questions others avoid
+
+
+## Featured work
+
+  <div class="banner">
+    <p>Coming soon.</p>
+  </div>
+
+* Designing a housing-risk question around lived experience
+* Shifting accessibility earlier in the development process
+* Making form errors visible, actionable, and scalable
+
+
+## Thoughts
+
+* <a class="post-link" href="/thoughts/2026/04/ai-for-designers">Design and engineering solve different problems; AI initiatives are forgetting that</a>
+
+## Contact
+If you want to talk about accessibility, design systems, or improving how teams work, please send me an email at <a href="mailto:jeana@jeana.dev">jeana@jeana.dev</a>.

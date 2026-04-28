@@ -32,9 +32,14 @@
   margin: 0 auto;
 
   img {
-    width: 50px;
-    height: 90px;
+    width: 35px;
+    height: 86px;
     margin: 0;
+
+    @include breakpoints.breakpoint(breakpoints.$bp-sm) {
+      width: 50px;
+      height: 90px;
+    }
   }
 }
 
@@ -51,20 +56,18 @@
 .header-name {
   grid-area: name;
   font-size: 1.8rem;
-  letter-spacing: -.01em;
-  font-family: typography.$font-stack-sans-serif;
+  font-family: typography.$font-stack-serif;
   text-transform: lowercase;
   text-align: center;
   align-self: flex-end;
   transition: all .1s ease;
+  margin-bottom:13px;
 
   @include breakpoints.breakpoint(breakpoints.$bp-sm) {
     font-size: 2.5rem;
+    margin-bottom: 0;
   }
 
-  @include breakpoints.breakpoint(breakpoints.$bp-md) {
-    font-size: 3rem;
-  }
 }
 
 .header-nav {
