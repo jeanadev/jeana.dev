@@ -3,7 +3,7 @@ title: Centering lived experiences - Jeana Clark Portfolio
 description: Portfolio of Designer, Developer, Accessibility Advocate, Jeana Clark
 
 layout: free-form.njk
-modifier: Projects
+modifier: projects
 sectionHeader: Projects
 ---
 
@@ -23,7 +23,7 @@ A critical eligibility question in a form that would speed up processing asked:
   <img class="projects--img-sm" src="/assets/img/homeless-before.png" alt="Screenshot of form question showing yes or no answers to the question are you currently homeless">
 
   <figcaption> 
-      Screenshot of the initial homeless question question.
+      Screenshot of the initial homeless question.
   </figcaption>
 
 </figure>
@@ -56,7 +56,7 @@ There was initial resistance to changing the established form language. Alignmen
 - Before: “Are you currently homeless?” Yes/No, with follow-up branching  
 - After: “Which of these statements best describes your living situation?” (Select all that apply)
 
-<figure aria-describedby="living-situation-transcript">
+<figure>
 
   <img  class="projects--img"  src="/assets/img/homeless-after.png" alt="Screenshot of form question asking users to describe their housing situation">
 
@@ -66,8 +66,8 @@ There was initial resistance to changing the established form language. Alignmen
 
 </figure>
 
-  <details id="living-situation-transcript">
-    <summary>Show full text from screenshot</summary>
+  <details>
+    <summary>Show full text from revised living situation screenshot</summary>
 
     <p>Which of these statements best describes your living situation? (Select all that apply).</p>
 

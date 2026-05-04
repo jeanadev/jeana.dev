@@ -5,7 +5,7 @@ eleventyNavigation:
   key: Projects
   order: 2
 layout: free-form.njk
-modifier: Projects
+modifier: projects
 sectionHeader: Projects
 ---
 
