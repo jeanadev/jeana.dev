@@ -153,6 +153,14 @@
   max-width: 100%;
 }
 
+.projects--img-sm {
+  max-width: 420px;
+
+  @media (max-width: 420px) {
+    max-width: 100%;
+  }
+}
+
 .projects--img-shadow {
   box-shadow: 0 .1em .5em #989d79;
 }
@@ -265,7 +273,8 @@ a,
   }
 }
 
-.blog--title {
+.blog--title,
+.case-study--title {
   font-weight: 700;
   font-size: 2rem;
   letter-spacing: -.01em;
@@ -291,7 +300,8 @@ a,
   }
 }
 
-.posted-on {
+.posted-on,
+.case-study--impact {
   font-weight: 600;
   margin: .5rem 0;
   display: block;
@@ -355,7 +365,7 @@ a,
   }
 }
 
-.freeform-home, .blog {
+.freeform-home, .blog, .freeform-projects {
   h2 {
     color: variables.$color-darkest-green;
     font-family: typography.$font-stack-serif;
@@ -364,5 +374,24 @@ a,
 
 .freeform-home .post-link {
   font-size:1rem;
+}
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+figcaption {
+  font-size: 0.875rem;
+  font-style:italic;
+  line-height: 1.4;
+}
+
+details {
+  border: 1px solid variables.$color-green;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 0.875rem;
+  line-height: 1.4;
 }
 

@@ -27,7 +27,7 @@ Most accessibility issues don’t come from lack of effort—they come from uncl
     <p>Coming soon.</p>
   </div>
 
-* Designing a housing-risk question around lived experience
+* <a href="/projects/homeless-lived-experiences">Designing a housing-risk question around lived experience</a>
 * Shifting accessibility earlier in the development process
 * Making form errors visible, actionable, and scalable
 
