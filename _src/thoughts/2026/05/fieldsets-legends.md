@@ -91,7 +91,7 @@ There are times when a `<legend>` does real work. Radio buttons and checkboxes a
 
 Without it, a screen reader user lands on an option with no context for what they're choosing. With it, they hear the question and the option together, which is exactly what a sighted user gets by scanning the page.
 
-```
+```html
 <fieldset>
   <legend>When do you prefer to be contacted?</legend>
   <div>
