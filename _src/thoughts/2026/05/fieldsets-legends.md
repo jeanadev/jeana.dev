@@ -13,27 +13,27 @@ tags: thoughts
 
 When I joined my current team, fieldsets were largely absent from our forms. Not because anyone had decided against them — they just weren’t on most developers’ radar. Pages had groups of disconnected fields that could have benefited from more context.
 
-So I wrote guidance. I documented when and why to use `<fieldset>` and `<legend>`, published it to our design system, and teams started adopting it. But then I started to realize teams didn’t learn *when* to use fieldsets; they learned *to* use fieldsets.
+So I wrote guidance. I documented when and why to use `<fieldset>` and `<legend>`, published it to our design system, and teams started adopting it. But then I started to realize teams didn’t learn *when* to use fieldsets; they learned *to use* fieldsets.
 
-The guidance fixed the gap it aimed to address, but then it created a new one: it wrapped every input on every form in a `<fieldset>`, without exception. A single text area asking someone to describe their disability — in its own fieldset. A standalone email input — in its own fieldset. A wall of text, with no form fields, in its own fieldset. None of them needed it.
+The guidance fixed the gap it aimed to address, but then it created a new one: it wrapped every input on every form in a `<fieldset>`, without exception. A single text area asking someone to describe their disability — in its own fieldset. A standalone email input — in its own fieldset. An entire page of instructional text, with no form fields, in its own fieldset. None of them needed it.
 
 This is a common pendulum swing in large organizations. Guidance written to fix a specific problem gets adopted without understanding the reasoning behind it. The rule travels, the context doesn't. Teams learn that they *have* to use fieldsets, but not *when* to use them — and a pattern meant to solve a real problem becomes a default applied to everything.
 
-Neither extreme serves users. Under-use means related controls lack a shared label. Overuse means assistive technology users hear redundant, meaningless prefixes on every field they encounter. Different problems, same root cause: implementing a pattern without understanding what it's for.
+Neither extreme serves users. Underuse means related controls lack a shared label. Overuse means assistive technology users hear redundant, meaningless prefixes on every field they encounter. Different problems, same root cause: implementing a pattern without understanding what it's for.
 
 ## What a fieldset and legend actually do
 
 A `<fieldset>` groups related form controls under a shared name, provided by a `<legend>`. That's it. That's the whole job.
 
-The `<legend>` becomes part of the accessible name for every control inside the group, giving each field context it couldn't convey on its own.
+The `<legend>` becomes part of the accessible name for every control inside the group, giving each field context it couldn't convey on its own. 
 
 That context is the entire value proposition of a fieldset. It's also the problem when it's redundant.
 
 A `<fieldset>` without a `<legend>` provides no accessible group name. If you're not providing a `<legend>`, you don't need the `<fieldset>`.
 
-## What assistive technology (AT) users actually hear
+## What assistive technology users actually hear
 
-In forms mode, screen readers suppress surrounding page content and announce only form controls and their labels. A user navigating a form efficiently by tabbing may never hear the page heading or any descriptive text between fields, making the `<legend>` the only additional context available when they land on a field.
+In forms mode, screen readers suppress surrounding page content and announce only form controls and their labels. A user navigating a form efficiently by tabbing may never hear the page heading or any descriptive text between fields. In those cases, the `<legend>` may be the only additional context available when they land on a field.
 
 When a fieldset is used correctly, that context is meaningful. A screen reader user navigating an address form hears *"Mailing address, Street, edit text"* — the group name and the label together, which is exactly what they need.
 
@@ -43,7 +43,7 @@ When it's redundant, it becomes noise. A single email input wrapped in a fieldse
 
 Some fields are clear on their own, but still benefit from a fieldset because they belong to a named group. Address fields are the clearest example. "Street," "City," "State," and "ZIP code" are all clear labels — but when a form includes both a mailing address and a home address, the group name is what tells you which set of fields you're filling in. Without it, a screen reader user encounters "Street" twice with nothing to distinguish them.
 
-```
+```html
 <fieldset>
   <legend>Home address</legend>
   <div>
@@ -143,7 +143,7 @@ Two questions to ask before you add a fieldset:
 
 If yes to both — use a fieldset. If no to either — skip it.
 
-The questions should agree. If you find yourself answering yes to one and no to the other, that's worth pausing on — it usually means the relationship between the fields, or the group name you have in mind, isn't as clear as it needs to be.
+In most cases, the answers to those questions should align. If you find yourself answering yes to one and no to the other, that's worth pausing on — it usually means the relationship between the fields, or the group name you have in mind, isn't as clear as it needs to be.
 
 WCAG 2.2 Technique H71 makes the same distinction: when the individual label for each control is sufficient on its own, a fieldset is not required. ([Source](https://www.w3.org/WAI/WCAG22/Techniques/html/H71)). H71 is also a *sufficient* technique for meeting WCAG [1.3.1 Info and relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships) and [3.3.2 Labels and instructions](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions) — not a requirement.
 
@@ -165,7 +165,8 @@ That distinction lives in the reasoning, not the rule.
 
 ## Further reading
 
-- [Fieldsets, Legends and Screen Readers again — TPGi](https://www.tpgi.com/fieldsets-legends-and-screen-readers-again/)  
-- [Use legend and fieldset — Adrian Roselli](https://adrianroselli.com/2022/07/use-legend-and-fieldset.html)  
-- [Foundations: grouping forms with fieldset and legend — Tetralogical](https://tetralogical.com/blog/2025/01/31/foundations-fieldset-and-legend/)  
-- [Grouping form controls with fieldset and legend \- Accessibility Developer Guide](https://www.accessibility-developer-guide.com/examples/forms/grouping-with-fieldset-legend/)
+- [Fieldsets, Legends and Screen Readers again - TPGi](https://www.tpgi.com/fieldsets-legends-and-screen-readers-again/)
+- [Use legend and fieldset - Adrian Roselli](https://adrianroselli.com/2022/07/use-legend-and-fieldset.html)
+- [Foundations: grouping forms with fieldset and legend - Tetralogical](https://tetralogical.com/blog/2025/01/31/foundations-fieldset-and-legend/)
+- [Grouping form controls with fieldset and legend - Accessibility Developer Guide](https://www.accessibility-developer-guide.com/examples/forms/grouping-with-fieldset-legend/)
+- [Using the fieldset and legend elements - GovUK](https://accessibility.blog.gov.uk/2016/07/22/using-the-fieldset-and-legend-elements/)
