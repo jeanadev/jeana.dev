@@ -34,6 +34,7 @@ Most accessibility issues don’t come from lack of effort—they come from uncl
 
 ## Thoughts
 
+* <a class="post-link" href="/thoughts/2026/05/fieldsets-legends/">Not Every Form Field needs to be in a Fieldset</a>
 * <a class="post-link" href="/thoughts/2026/04/ai-for-designers">Design and engineering solve different problems; AI initiatives are forgetting that</a>
 
 ## Contact
