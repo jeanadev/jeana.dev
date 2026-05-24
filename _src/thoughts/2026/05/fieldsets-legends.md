@@ -11,13 +11,13 @@ tags: thoughts
 
 ## The pendulum problem
 
-When I joined my current team, fieldsets were largely absent from our forms. Not because anyone had decided against them — they just weren’t on most developers’ radar. Pages had groups of disconnected fields that could have benefited from more context.
+When I joined my current team, fieldsets were largely absent from our forms. Not because anyone had decided against them — they just weren’t on most developers’ radar. Forms were made of disconnected fields that could have benefited from more context.
 
-So I wrote guidance. I documented when and why to use `<fieldset>` and `<legend>`, published it to our design system, and teams started adopting it. But then I started to realize teams didn’t learn *when* to use fieldsets; they learned *to use* fieldsets.
+So I wrote guidance. I documented when and why to use `<fieldset>` and `<legend>`, published it to our design system, and teams started adopting it. The guidance fixed the gap it aimed to address.
 
-The guidance fixed the gap it aimed to address, but then it created a new one: it wrapped every input on every form in a `<fieldset>`, without exception. A single text area asking someone to describe their disability — in its own fieldset. A standalone email input — in its own fieldset. An entire page of instructional text, with no form fields, in its own fieldset. None of them needed it.
+But then it created a new one. Teams didn’t learn *when* to use fieldsets; they learned *to use* fieldsets. They made sure all form inputs were in a `<fieldset>`, without exception. A single text area asking someone to describe their disability — in its own fieldset. A standalone email input — in its own fieldset. An entire page of instructional text, with no form fields, in its own fieldset. None of them needed it.
 
-This is a common pendulum swing in large organizations. Guidance written to fix a specific problem gets adopted without understanding the reasoning behind it. The rule travels, the context doesn't. Teams learn that they *have* to use fieldsets, but not *when* to use them — and a pattern meant to solve a real problem becomes a default applied to everything.
+This is a common pendulum swing in large organizations. Guidance written to fix a specific problem gets adopted without understanding the reasoning behind it. The rule travels, the context doesn't. Teams learn that they *have* to use fieldsets, but not *when* to use them — and a pattern meant to solve a real problem becomes a default rule applied to everything.
 
 Neither extreme serves users. Underuse means related controls lack a shared label. Overuse means assistive technology users hear redundant, meaningless prefixes on every field they encounter. Different problems, same root cause: implementing a pattern without understanding what it's for.
 
@@ -83,7 +83,7 @@ Some fields are clear on their own, but still benefit from a fieldset because th
 
 Date fields split across three inputs work the same way. "Month," "Day," and "Year" are unambiguous individually, but the `<legend>` — "Date of birth," "Service start date" — tells users what the three fields collectively ask for.
 
-The signal here isn't that the individual labels are confusing. It's that the fields have a relationship that needs a name.
+It's not that the individual labels are confusing. It's that the fields have a relationship that needs a name.
 
 ## When the label alone isn't enough
 
@@ -128,22 +128,22 @@ Without it, a screen reader user lands on an option with no context for what the
 
 ### Single inputs with clear, self-contained labels
 
-Sometimes the label is enough. A standalone `<textarea>` labeled "Describe your condition in your own words" or a file `<input>` labeled "Upload supporting documents" — both tell the user exactly what's needed. There's no group, no relationship between fields, nothing a `<legend>` would add.
+Sometimes the label is enough. A standalone `<textarea>` labeled "Describe your condition" or a file `<input>` labeled "Upload supporting documents" — both tell the user exactly what's needed. There's no group, no relationship between fields, nothing a `<legend>` would add.
 
 ### One-question forms
 
 A simple one-question form doesn't need a fieldset either. Take an email newsletter signup with a single email input — the page heading already provides the context a `<legend>` would otherwise supply. Wrapping that field in a fieldset doesn't add meaning; it just adds noise.
 
-## The decision rule
+## When to use a fieldset
 
 Two questions to ask before you add a fieldset:
 
 1. Are there two or more fields that share a meaningful relationship?
 2. Would a group name add meaning beyond what the individual labels already carry?
 
-If yes to both — use a fieldset. If no to either — skip it.
+If yes to both, use a fieldset. If no to either, skip it.
 
-In most cases, the answers to those questions should align. If you find yourself answering yes to one and no to the other, that's worth pausing on — it usually means the relationship between the fields, or the group name you have in mind, isn't as clear as it needs to be.
+In most cases, the answers to those questions should align. If you find yourself answering yes to one and no to the other, that's worth pausing on. This usually means the relationship between the fields, or the group name you have in mind, isn't as clear as it needs to be.
 
 WCAG 2.2 Technique H71 makes the same distinction: when the individual label for each control is sufficient on its own, a fieldset is not required. ([Source](https://www.w3.org/WAI/WCAG22/Techniques/html/H71)). H71 is also a *sufficient* technique for meeting WCAG [1.3.1 Info and relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships) and [3.3.2 Labels and instructions](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions) — not a requirement.
 
@@ -161,7 +161,8 @@ The goal of this article isn't to swing the pendulum back. Teams that read this 
 
 The goal is to use fieldsets where they add meaning and skip them where they don't — which requires understanding what they're for. A `<fieldset>` and `<legend>` are not an accessibility checkbox. They're a mechanism for giving grouped controls a shared name that the individual labels can't provide. Used correctly, they make forms significantly easier to navigate for assistive technology users. Used incorrectly, they add noise that makes forms harder to navigate.
 
-That distinction lives in the reasoning, not the rule.
+By documenting the reasoning behind the rules, not just the rules themselves, we can reduce the pendulum swings that follow.
+
 
 ## Further reading
 
