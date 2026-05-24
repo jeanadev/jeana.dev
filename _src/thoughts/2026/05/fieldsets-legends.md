@@ -1,5 +1,5 @@
 ---
-title: Not Every Form Field needs to be in a Fieldset 
+title: Not Every Form Field Needs to Be in a Fieldset
 description: Sometimes too many fieldsets cause the same problems of having no fieldsets at all
 sectionHeader: Thoughts
 layout: blog.njk
